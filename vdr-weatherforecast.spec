@@ -44,10 +44,10 @@ install -Dpm 644 %{SOURCE1} \
 
 
 %changelog
-* Thu Jan 31 2016 Martin Gansser <martinkg@fedoraproject.org> - 0.2.0-1
+* Sun Jan 31 2016 Martin Gansser <martinkg@fedoraproject.org> - 0.2.0-1
 - Update to 0.2.0
 
-* Sun Oct 03 2015 Martin Gansser <martinkg@fedoraproject.org> - 0.1.1-2
+* Sat Oct 03 2015 Martin Gansser <martinkg@fedoraproject.org> - 0.1.1-2
 - added BSD to the License tag
 
 * Sun Apr 12 2015 Martin Gansser <martinkg@fedoraproject.org> - 0.1.1-1
