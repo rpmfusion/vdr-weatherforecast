@@ -2,7 +2,7 @@
 
 Name:           vdr-weatherforecast
 Version:        0.2.0
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        A VDR plugin which provides a weather forecast 
 
 Group:          Applications/Multimedia
@@ -12,6 +12,7 @@ Source0:        http://projects.vdr-developer.org/git/vdr-plugin-%{pname}.git/sn
 # Configuration files for plugin parameters. These are Fedora specific and not in upstream.
 Source1:        %{name}.conf
 
+BuildRequires:  gcc-c++
 BuildRequires:  vdr-devel >= 1.7.22
 BuildRequires:  libcurl-devel
 BuildRequires:  jansson-devel
@@ -44,6 +45,9 @@ install -Dpm 644 %{SOURCE1} \
 
 
 %changelog
+* Fri Oct 12 2018 Martin Gansser <martinkg@fedoraproject.org> - 0.2.0-8
+- Add BR gcc-c++
+
 * Sun Aug 19 2018 Leigh Scott <leigh123linux@googlemail.com> - 0.2.0-7
 - Rebuilt for Fedora 29 Mass Rebuild binutils issue
 
