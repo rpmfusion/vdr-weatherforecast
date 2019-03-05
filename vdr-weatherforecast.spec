@@ -2,7 +2,7 @@
 
 Name:           vdr-weatherforecast
 Version:        0.2.0
-Release:        8%{?dist}
+Release:        9%{?dist}
 Summary:        A VDR plugin which provides a weather forecast 
 
 Group:          Applications/Multimedia
@@ -45,6 +45,9 @@ install -Dpm 644 %{SOURCE1} \
 
 
 %changelog
+* Tue Mar 05 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.2.0-9
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
+
 * Fri Oct 12 2018 Martin Gansser <martinkg@fedoraproject.org> - 0.2.0-8
 - Add BR gcc-c++
 
