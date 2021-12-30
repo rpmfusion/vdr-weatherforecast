@@ -2,7 +2,7 @@
 
 Name:           vdr-weatherforecast
 Version:        0.2.0
-Release:        19%{?dist}
+Release:        20%{?dist}
 Summary:        A VDR plugin which provides a weather forecast 
 License:        GPLv2+ and BSD
 URL:            http://projects.vdr-developer.org/projects/plg-weatherforecast
@@ -24,10 +24,10 @@ WeatherForecast provides a weather forecast based on forecast.io data.
 %setup -q -n vdr-plugin-%{pname}-%{version}
 
 %build
-make CFLAGS="%{optflags} -fPIC" CXXFLAGS="%{optflags} -fPIC" %{?_smp_mflags} all
+%make_build CFLAGS="%{optflags} -fPIC" CXXFLAGS="%{optflags} -fPIC"
 
 %install
-make install DESTDIR=%{buildroot}
+%make_install
 # weatherforecast.conf
 install -Dpm 644 %{SOURCE1} \
     %{buildroot}%{_sysconfdir}/sysconfig/vdr-plugins.d/%{pname}.conf
@@ -43,6 +43,9 @@ install -Dpm 644 %{SOURCE1} \
 
 
 %changelog
+* Thu Dec 30 2021 Martin Gansser <martinkg@fedoraproject.org> - 0.2.0-20
+- Rebuilt for new VDR API version
+
 * Tue Aug 03 2021 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 0.2.0-19
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
