@@ -1,4 +1,7 @@
 %global pname   weatherforecast
+# version we want build against
+%global vdr_version 2.6.1
+
 
 Name:           vdr-weatherforecast
 Version:        0.2.0
@@ -11,7 +14,7 @@ Source0:        http://projects.vdr-developer.org/git/vdr-plugin-%{pname}.git/sn
 Source1:        %{name}.conf
 
 BuildRequires:  gcc-c++
-BuildRequires:  vdr-devel >= 1.7.22
+BuildRequires:  vdr-devel >= %{vdr_version}
 BuildRequires:  libcurl-devel
 BuildRequires:  jansson-devel
 BuildRequires:  libskindesignerapi-devel
