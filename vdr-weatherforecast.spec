@@ -1,15 +1,17 @@
 %global pname   weatherforecast
 # version we want build against
 %global vdr_version 2.6.1
-
+%if 0%{?fedora} >= 38
+%global vdr_version 2.6.2
+%endif
 
 Name:           vdr-weatherforecast
 Version:        0.2.0
-Release:        23%{?dist}
+Release:        24%{?dist}
 Summary:        A VDR plugin which provides a weather forecast 
 License:        GPLv2+ and BSD
-URL:            http://projects.vdr-developer.org/projects/plg-weatherforecast
-Source0:        http://projects.vdr-developer.org/git/vdr-plugin-%{pname}.git/snapshot/vdr-plugin-%{pname}-%{version}.tar.bz2
+URL:            https://github.com/vdr-projects/vdr-plugin-weatherforecast
+Source0:        https://github.com/vdr-projects/vdr-plugin-%{pname}/archive/refs/tags/%{version}.tar.gz#/%{name}-%{version}.tar.gz
 # Configuration files for plugin parameters. These are Fedora specific and not in upstream.
 Source1:        %{name}.conf
 
@@ -46,6 +48,10 @@ install -Dpm 644 %{SOURCE1} \
 
 
 %changelog
+* Sat Dec 03 2022 Martin Gansser <martinkg@fedoraproject.org> - 0.2.0-24
+- Update URL address
+- Rebuilt for new VDR API version
+
 * Mon Aug 08 2022 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 0.2.0-23
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_37_Mass_Rebuild and ffmpeg
   5.1
