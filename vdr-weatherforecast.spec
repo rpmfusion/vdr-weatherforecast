@@ -2,12 +2,12 @@
 # version we want build against
 %global vdr_version 2.6.3
 %if 0%{?fedora} >= 40
-%global vdr_version 2.6.7
+%global vdr_version 2.6.9
 %endif
 
 Name:           vdr-weatherforecast
 Version:        0.2.0
-Release:        30%{?dist}
+Release:        31%{?dist}
 Summary:        A VDR plugin which provides a weather forecast 
 License:        GPLv2+ and BSD
 URL:            https://github.com/vdr-projects/vdr-plugin-weatherforecast
@@ -49,6 +49,9 @@ install -Dpm 644 %{SOURCE1} \
 
 
 %changelog
+* Fri Jul 26 2024 Martin Gansser <martinkg@fedoraproject.org> - 0.2.0-31
+- Rebuilt for new VDR API version 2.6.9
+
 * Sun Apr 21 2024 Martin Gansser <martinkg@fedoraproject.org> - 0.2.0-30
 - Rebuilt for new VDR API version
 
