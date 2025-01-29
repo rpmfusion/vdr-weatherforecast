@@ -10,7 +10,7 @@
 
 Name:           vdr-weatherforecast
 Version:        0.2.0
-Release:        32%{?dist}
+Release:        33%{?dist}
 Summary:        A VDR plugin which provides a weather forecast 
 License:        GPL-2.0-or-later AND BSD-2-Clause
 URL:            https://github.com/vdr-projects/vdr-plugin-weatherforecast
@@ -52,6 +52,9 @@ install -Dpm 644 %{SOURCE1} \
 
 
 %changelog
+* Wed Jan 29 2025 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 0.2.0-33
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_42_Mass_Rebuild
+
 * Mon Oct 21 2024 Martin Gansser <martinkg@fedoraproject.org> - 0.2.0-32
 - Rebuilt for new VDR API version 2.7.3
 
